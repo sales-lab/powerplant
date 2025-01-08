@@ -1,0 +1,4 @@
+/images/original/*.jpg
+/images/resized/*.png
+/images/masks/*.png
+/images/masked/*.png
