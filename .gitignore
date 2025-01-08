@@ -1,4 +1,7 @@
+.venv
+__pycache__
 /checkpoints/segment/model.*
+/dist
 /images/original/*.jpg
 /images/resized/*.png
 /images/masks/*.png
