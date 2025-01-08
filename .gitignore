@@ -1,4 +1,6 @@
+/checkpoints/segment/model.*
 /images/original/*.jpg
 /images/resized/*.png
 /images/masks/*.png
 /images/masked/*.png
+/vendor/PaddleSeg
