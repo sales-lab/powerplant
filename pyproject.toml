@@ -9,6 +9,8 @@ dependencies = [
     "numpy>=2.2.1",
     "opencv-python>=4.10.0.84",
     "pillow>=11.1.0",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
     "tqdm>=4.67.1",
 ]
 
@@ -18,6 +20,11 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.sdist]
 exclude = ["/.jj"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.4",
+]
 
 [project.scripts]
 powerplant-segment = "powerplant.scripts:segment_cmd"
