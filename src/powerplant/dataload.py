@@ -29,13 +29,30 @@ from torch.utils.data import DataLoader
 from torchvision.transforms import v2
 from typing import Dict, Optional
 
+import pandas as pd
 import torch
+
+
+@dataclass
+class Counters:
+    orders: int
+    clades: int
+    countries: int
 
 
 @dataclass
 class DataLoaders:
     train: DataLoader
     eval: DataLoader
+
+
+def compute_counters(filename: str) -> Counters:
+    tbl = pd.read_csv(filename)
+    return Counters(
+        tbl["order"].max() + 1,
+        tbl["clade"].max() + 1,
+        tbl["country"].max() + 1,
+    )
 
 
 class PadImage:

@@ -1,14 +1,17 @@
 [project]
 name = "powerplant"
-version = "0.46.0"
+version = "0.47.0"
 description = "Deep learning framework for the classification of herbarium samples"
 readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 dependencies = [
+    "datasets>=3.2.0",
     "numpy>=2.2.1",
     "opencv-python>=4.10.0.84",
+    "pandas>=2.2.3",
     "pillow>=11.1.0",
+    "timm>=1.0.14",
     "torch>=2.6.0",
     "torchvision>=0.21.0",
     "tqdm>=4.67.1",
@@ -28,3 +31,4 @@ dev = [
 
 [project.scripts]
 powerplant-segment = "powerplant.scripts:segment_cmd"
+powerplant-train = "powerplant.scripts:train_cmd"

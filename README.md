@@ -91,13 +91,45 @@ powerplant-segment
 The processed images (segmented and resized) will be stored in the
 `images/masked` directory.
 
+### Prediction of DNA Yield
+
+PowerPlant employs a convolutional neural network (CNN) coupled with
+metadata analysis to predict DNA yield from herbarium specimens. This
+dual-input model processes both segmented images and associated specimen
+data to generate accurate yield estimates.
+
+To use this feature:
+
+1.  Ensure your segmented herbarium images are stored in the
+    `images/masked` directory. These should be the output from the
+    preprocessing step described in the [Image
+    Segmentation](#image-segmentation) section.
+2.  Prepare your metadata in a CSV file named `samples.csv` and place it
+    in the `metadata` directory. This file should contain relevant
+    information for each specimen, including:
+    - Specimen age;
+    - Location of sample collection;
+    - Taxonomic information.
+
+An example `samples.csv` file is included in this repository to guide
+you in formatting your metadata correctly.
+
+To train the prediction model, run the following command:
+
+``` sh
+powerplant-train
+```
+
+This script processes the images and metadata from the dataset
+directory, trains the machine learning model, and saves the trained
+model in the `checkpoints/prediction` directory.
 
 ## License
 
 GNU Affero General Public License, version 3.
 
-
 ## Contact
 
-For questions and support, please [open an issue](https://github.com/sales-lab/powerplant/issues)
-on our GitHub repository.
+For questions and support, please [open an
+issue](https://github.com/sales-lab/powerplant/issues) on our GitHub
+repository.

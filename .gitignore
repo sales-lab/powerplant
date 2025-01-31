@@ -1,7 +1,10 @@
 .venv
 __pycache__
+/checkpoints/prediction/trained.pth
 /checkpoints/segment/model.*
+/dataset
 /dist
+/metadata/samples.csv
 /images/original/*.jpg
 /images/resized/*.png
 /images/masks/*.png
