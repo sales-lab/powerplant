@@ -2,6 +2,7 @@
 __pycache__
 /checkpoints/prediction/trained.pth
 /checkpoints/segment/model.*
+/checkpoints/segmentation-checkpoint.zip
 /dataset
 /dist
 /metadata/samples.csv

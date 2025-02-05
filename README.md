@@ -69,6 +69,15 @@ and
 [PaddleSeg](https://github.com/PaddlePaddle/PaddleSeg/blob/release/2.10/docs/install.md#22-install-paddleseg)
 variants for your hardware.
 
+5. Download trained weights for segmentation:
+
+``` sh
+cd checkpoints
+curl --location --output segmentation-checkpoint.zip 'https://figshare.com/ndownloader/files/52146800'
+unzip segmentation-checkpoint.zip
+```
+
+
 ## Usage
 
 ### Image Segmentation
