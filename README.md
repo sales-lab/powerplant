@@ -109,19 +109,21 @@ data to generate accurate yield estimates.
 
 To use this feature:
 
-1.  Ensure your segmented herbarium images are stored in the
-    `images/masked` directory. These should be the output from the
-    preprocessing step described in the [Image
-    Segmentation](#image-segmentation) section.
-2.  Prepare your metadata in a CSV file named `samples.csv` and place it
-    in the `metadata` directory. This file should contain relevant
+1.  Retrieve the segmented herbarium images from the `images/masked`
+    directory (generated during the preprocessing step described in the
+    [Image Segmentation](#image-segmentation) section) and copy them
+    into the `dataset` directory. Divide these images into training and
+    test sets by placing them in the corresponding `dataset/train` and
+    `dataset/test` subdirectories.
+2.  Prepare your metadata in a CSV file named `metadata.csv` and place
+    it inside the `dataset` directory. This file should contain relevant
     information for each specimen, including:
     - Specimen age;
     - Location of sample collection;
     - Taxonomic information.
 
-An example `samples.csv` file is included in this repository to guide
-you in formatting your metadata correctly.
+An example file `metadata/samples.csv` is included in this repository to
+guide you in formatting your metadata correctly.
 
 To train the prediction model, run the following command:
 

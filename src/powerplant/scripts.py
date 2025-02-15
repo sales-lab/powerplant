@@ -61,7 +61,7 @@ def setup_logging():
 
 
 def train_cmd():
-    counters = compute_counters("metadata/samples.csv")
+    counters = compute_counters("dataset/metadata.csv")
     model = setup_model(counters)
     loaders = setup_dataloaders(model)
     _train(model, loaders)
